@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:4.0
+N:{{user::firstname}};{{user::lastname}}
+FN:{{user::lastname}} {{user::firstname}}
+ORG:{{user::company}}
+TITLE:Redaktion & Gestaltung
+TEL;TYPE=work,voice;VALUE=uri:tel:{{user::phone}}
+TEL;TYPE=home,voice;VALUE=uri:tel:{{user::mobile}}
+ADR;TYPE=home;LABEL="{{user::street}}\n{{user::postal}} {{user::city}}":;;{{user::street}};{{user::city}};;{{user::postal}}
+EMAIL:{{user::email}}
+URL:{{user::website}}
+REV:{{ qrcode::timecode }}
+END:VCARD

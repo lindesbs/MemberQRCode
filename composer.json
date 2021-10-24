@@ -1,0 +1,40 @@
+{
+  "name": "lindesbs/memberqrcode",
+  "type": "contao-bundle",
+  "description": "Erstellen eines QRCodes aus den Mitgliederdaten",
+  "homepage": "https://ktrion.de",
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Stefan Lindecke",
+      "homepage": "https://lindesbs.de"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "contao/core-bundle": "^4.9",
+    "chillerlan/php-qrcode": "^4.3"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0",
+    "contao/easy-coding-standard": "^3.0"
+  },
+  "extra": {
+    "contao-manager-plugin": "lindesbs\\MemberQRCode\\ContaoManager\\Plugin"
+  },
+  "autoload": {
+    "psr-4": {
+      "lindesbs\\MemberQRCode\\": "src/"
+    },
+    "classmap": [
+      "src/Resources/contao"
+    ],
+    "exclude-from-classmap": [
+      "src/Resources/contao/assets",
+      "src/Resources/contao/config",
+      "src/Resources/contao/dca",
+      "src/Resources/contao/languages",
+      "src/Resources/contao/templates"
+    ]
+  }
+}
