@@ -1,0 +1,24 @@
+BEGIN:VCARD
+VERSION:4.0
+N:<?= $this->lastname; ?>;<?= $this->firstname; ?>;;;<?= $this->firstname; ?> <?= $this->lastname; ?>
+
+FN: <?= $this->firstname; ?> <?= $this->lastname; ?>
+
+ORG:<?= $this->company; ?>
+
+URL;WORK:<?= $this->website; ?>
+
+URL;PRIVATE:<?= $this->website; ?>
+
+EMAIL;type=WORK;type=PREF:<?= $this->email; ?>
+
+TEL;type=FAX;HOME:<?= $this->fax; ?>
+
+TEL;type=CELL;MOBILE:<?= $this->phone; ?>
+
+TEL;type=PHONE;MOBILE:<?= $this->mobile; ?>
+
+ADR;CHARSET=UTF-8;HOME;type=pref:;;<?= $this->street; ?>;<?= $this->city; ?>;;<?= $this->postal; ?>;
+LABEL;HOME;PREF;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:<?= $this->street; ?>;<?= $this->postal; ?> <?= $this->city; ?>
+REV:<?= $this->revTimecode; ?>
+END:VCARD

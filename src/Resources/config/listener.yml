@@ -1,6 +1,0 @@
-services:
-  _defaults:
-    autoconfigure: true
-  lindesbs\MemberQRCode\EventListener\MemberQRCodeListener:
-      arguments:
-        - '@contao.framework'

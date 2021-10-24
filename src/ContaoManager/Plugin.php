@@ -15,6 +15,8 @@ class Plugin implements BundlePluginInterface
      */
     public function getBundles(ParserInterface $parser)
     {
+
+
         return [
             BundleConfig::create(MemberQRCodeBundle::class)
                 ->setLoadAfter([ContaoCoreBundle::class]),

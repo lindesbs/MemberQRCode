@@ -11,7 +11,7 @@
     }
   ],
   "require": {
-    "php": ">=7.1",
+    "php": ">=7.4",
     "contao/core-bundle": "^4.9",
     "chillerlan/php-qrcode": "^4.3"
   },
