@@ -7,6 +7,7 @@ use chillerlan\QRCode\QROptions;
 use Contao\CoreBundle\ServiceAnnotation\Hook;
 use Contao\Environment;
 use DateTime;
+use FrontendTemplate;
 use HeimrichHannot\Haste\Model\MemberModel;
 
 
@@ -53,7 +54,7 @@ class MemberQRCodeListener
                 if (count($chunks) > 0) {
                     $outputType = array_shift($chunks);
                     if ($outputType === "raw") {
-                        $objTemplate = new \FrontendTemplate($strTemplate);
+                        $objTemplate = new FrontendTemplate($strTemplate);
                         $objTemplate->setData($memberObj->row());
                         return $objTemplate->parse();
                     }
@@ -83,7 +84,7 @@ class MemberQRCodeListener
 					}
                 }
 
-                $objTemplate = new \FrontendTemplate($strTemplate);
+                $objTemplate = new FrontendTemplate($strTemplate);
                 $objTemplate->setData($memberObj->row());
 
                 $date = new DateTime();
