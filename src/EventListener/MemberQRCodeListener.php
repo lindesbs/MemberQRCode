@@ -6,9 +6,9 @@ use chillerlan\QRCode\QRCode;
 use chillerlan\QRCode\QROptions;
 use Contao\CoreBundle\ServiceAnnotation\Hook;
 use Contao\Environment;
+use Contao\MemberModel;
 use DateTime;
 use FrontendTemplate;
-use HeimrichHannot\Haste\Model\MemberModel;
 
 
 /**
