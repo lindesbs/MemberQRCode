@@ -43,6 +43,7 @@ class MemberQRCodeListener
             ];
 
             if ($memberObj) {
+				$date = new DateTime();
                 $outputType = QRCode::OUTPUT_IMAGE_PNG;
                 $version = 20;
                 $eccLevel = QRCode::ECC_L;
@@ -55,6 +56,7 @@ class MemberQRCodeListener
                     $outputType = array_shift($chunks);
                     if ($outputType === "raw") {
                         $objTemplate = new FrontendTemplate($strTemplate);
+						$objTemplate->revTimecode = $date->format('c');
                         $objTemplate->setData($memberObj->row());
                         return nl2br($objTemplate->parse());
                     }
@@ -87,7 +89,6 @@ class MemberQRCodeListener
                 $objTemplate = new FrontendTemplate($strTemplate);
                 $objTemplate->setData($memberObj->row());
 
-                $date = new DateTime();
                 $objTemplate->revTimecode = $date->format('c');
 
                 $options = new QROptions(
