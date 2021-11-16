@@ -56,7 +56,7 @@ class MemberQRCodeListener
                     if ($outputType === "raw") {
                         $objTemplate = new FrontendTemplate($strTemplate);
                         $objTemplate->setData($memberObj->row());
-                        return $objTemplate->parse();
+                        return nl2br($objTemplate->parse());
                     }
 
                     if (array_key_exists($outputType, $arrTypes)) {
